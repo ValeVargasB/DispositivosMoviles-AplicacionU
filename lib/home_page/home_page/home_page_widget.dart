@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/home_page/panel_informacion_universidad/panel_informacion_universidad_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'home_page_model.dart';
@@ -47,6 +48,20 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        endDrawer: Container(
+          width: MediaQuery.sizeOf(context).width * 0.9,
+          child: Drawer(
+            elevation: 16.0,
+            child: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+              child: wrapWithModel(
+                model: _model.panelInformacionUniversidadModel,
+                updateCallback: () => safeSetState(() {}),
+                child: PanelInformacionUniversidadWidget(),
+              ),
+            ),
+          ),
+        ),
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(90.0),
           child: AppBar(
@@ -73,11 +88,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       color: FlutterFlowTheme.of(context).primaryBackground,
                       size: 24.0,
                     ),
-                    Icon(
-                      Icons.menu,
-                      color: FlutterFlowTheme.of(context).primaryBackground,
-                      size: 24.0,
-                    ),
                   ],
                 ),
               ],
@@ -95,9 +105,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               children: [
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 70.0, 0.0, 0.0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [],
+                  child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [],
+                    ),
                   ),
                 ),
                 Padding(

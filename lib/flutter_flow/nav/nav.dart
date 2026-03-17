@@ -44,6 +44,21 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: HomePageWidget.routeName,
           path: HomePageWidget.routePath,
           builder: (context, params) => HomePageWidget(),
+        ),
+        FFRoute(
+          name: PortalestudiantilWidget.routeName,
+          path: PortalestudiantilWidget.routePath,
+          builder: (context, params) => PortalestudiantilWidget(),
+        ),
+        FFRoute(
+          name: SolicitudesademicasWidget.routeName,
+          path: SolicitudesademicasWidget.routePath,
+          builder: (context, params) => SolicitudesademicasWidget(),
+        ),
+        FFRoute(
+          name: AsistenciacursosWidget.routeName,
+          path: AsistenciacursosWidget.routePath,
+          builder: (context, params) => AsistenciacursosWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
