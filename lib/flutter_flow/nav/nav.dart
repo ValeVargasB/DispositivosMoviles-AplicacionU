@@ -59,6 +59,26 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: AsistenciacursosWidget.routeName,
           path: AsistenciacursosWidget.routePath,
           builder: (context, params) => AsistenciacursosWidget(),
+        ),
+        FFRoute(
+          name: PlanesEstudioWidget.routeName,
+          path: PlanesEstudioWidget.routePath,
+          builder: (context, params) => PlanesEstudioWidget(),
+        ),
+        FFRoute(
+          name: MapaSedesWidget.routeName,
+          path: MapaSedesWidget.routePath,
+          builder: (context, params) => MapaSedesWidget(),
+        ),
+        FFRoute(
+          name: ComentariosWidget.routeName,
+          path: ComentariosWidget.routePath,
+          builder: (context, params) => ComentariosWidget(),
+        ),
+        FFRoute(
+          name: ActividadesNoticiasWidget.routeName,
+          path: ActividadesNoticiasWidget.routePath,
+          builder: (context, params) => ActividadesNoticiasWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

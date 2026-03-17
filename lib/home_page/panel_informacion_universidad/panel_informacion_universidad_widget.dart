@@ -316,7 +316,7 @@ class _PanelInformacionUniversidadWidgetState
                       size: 20.0,
                     ),
                     Text(
-                      'San Pedro, Montes de Oca, San José, Costa Rica.',
+                      'San Pedro, Montes de Oca, San José, \nCosta Rica.',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             font: GoogleFonts.inter(
                               fontWeight: FlutterFlowTheme.of(context)

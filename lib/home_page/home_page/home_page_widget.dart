@@ -49,7 +49,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         endDrawer: Container(
-          width: MediaQuery.sizeOf(context).width * 0.9,
+          width: MediaQuery.sizeOf(context).width * 0.85,
           child: Drawer(
             elevation: 16.0,
             child: Padding(
@@ -105,11 +105,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               children: [
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 70.0, 0.0, 0.0),
-                  child: SingleChildScrollView(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [],
-                    ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [],
                   ),
                 ),
                 Padding(
