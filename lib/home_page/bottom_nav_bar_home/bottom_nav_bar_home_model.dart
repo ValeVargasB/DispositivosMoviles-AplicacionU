@@ -1,9 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'actividades_noticias_widget.dart' show ActividadesNoticiasWidget;
+import 'bottom_nav_bar_home_widget.dart' show BottomNavBarHomeWidget;
 import 'package:flutter/material.dart';
 
-class ActividadesNoticiasModel
-    extends FlutterFlowModel<ActividadesNoticiasWidget> {
+class BottomNavBarHomeModel extends FlutterFlowModel<BottomNavBarHomeWidget> {
   @override
   void initState(BuildContext context) {}
 

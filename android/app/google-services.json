@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "476458537130",
+    "project_id": "dbfideproyecto",
+    "storage_bucket": "dbfideproyecto.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476458537130:android:9451b4120f29cbb02ec0d3",
+        "android_client_info": {
+          "package_name": "com.mycompany.progradispositivosmoviles"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmRL7JpYtIJrXbLXSosldh4WANqrmey50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

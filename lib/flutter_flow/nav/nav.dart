@@ -61,24 +61,69 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => AsistenciacursosWidget(),
         ),
         FFRoute(
-          name: PlanesEstudioWidget.routeName,
-          path: PlanesEstudioWidget.routePath,
-          builder: (context, params) => PlanesEstudioWidget(),
+          name: HUPlanesEstudioWidget.routeName,
+          path: HUPlanesEstudioWidget.routePath,
+          builder: (context, params) => HUPlanesEstudioWidget(),
         ),
         FFRoute(
-          name: MapaSedesWidget.routeName,
-          path: MapaSedesWidget.routePath,
-          builder: (context, params) => MapaSedesWidget(),
+          name: HUMapaSedesWidget.routeName,
+          path: HUMapaSedesWidget.routePath,
+          builder: (context, params) => HUMapaSedesWidget(),
         ),
         FFRoute(
-          name: ComentariosWidget.routeName,
-          path: ComentariosWidget.routePath,
-          builder: (context, params) => ComentariosWidget(),
+          name: HUActividadesNoticiasWidget.routeName,
+          path: HUActividadesNoticiasWidget.routePath,
+          builder: (context, params) => HUActividadesNoticiasWidget(),
         ),
         FFRoute(
-          name: ActividadesNoticiasWidget.routeName,
-          path: ActividadesNoticiasWidget.routePath,
-          builder: (context, params) => ActividadesNoticiasWidget(),
+          name: CalendarioWidget.routeName,
+          path: CalendarioWidget.routePath,
+          builder: (context, params) => CalendarioWidget(),
+        ),
+        FFRoute(
+          name: NotificacionesWidget.routeName,
+          path: NotificacionesWidget.routePath,
+          builder: (context, params) => NotificacionesWidget(),
+        ),
+        FFRoute(
+          name: DetallePagEjemFeriadeEmpleoWidget.routeName,
+          path: DetallePagEjemFeriadeEmpleoWidget.routePath,
+          builder: (context, params) => DetallePagEjemFeriadeEmpleoWidget(),
+        ),
+        FFRoute(
+          name: LoginWidget.routeName,
+          path: LoginWidget.routePath,
+          builder: (context, params) => LoginWidget(),
+        ),
+        FFRoute(
+          name: DetallePagEjemCharlaCiberWidget.routeName,
+          path: DetallePagEjemCharlaCiberWidget.routePath,
+          builder: (context, params) => DetallePagEjemCharlaCiberWidget(),
+        ),
+        FFRoute(
+          name: ServicioAlClienteWidget.routeName,
+          path: ServicioAlClienteWidget.routePath,
+          builder: (context, params) => ServicioAlClienteWidget(),
+        ),
+        FFRoute(
+          name: HUComentarioWidget.routeName,
+          path: HUComentarioWidget.routePath,
+          builder: (context, params) => HUComentarioWidget(),
+        ),
+        FFRoute(
+          name: ServicioAlClienteWhatsappWidget.routeName,
+          path: ServicioAlClienteWhatsappWidget.routePath,
+          builder: (context, params) => ServicioAlClienteWhatsappWidget(),
+        ),
+        FFRoute(
+          name: PerfilWidget.routeName,
+          path: PerfilWidget.routePath,
+          builder: (context, params) => PerfilWidget(),
+        ),
+        FFRoute(
+          name: EditarPerfilWidget.routeName,
+          path: EditarPerfilWidget.routePath,
+          builder: (context, params) => EditarPerfilWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

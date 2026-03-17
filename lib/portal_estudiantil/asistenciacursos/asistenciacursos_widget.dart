@@ -24,6 +24,8 @@ class _AsistenciacursosWidgetState extends State<AsistenciacursosWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => AsistenciacursosModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -44,7 +46,7 @@ class _AsistenciacursosWidgetState extends State<AsistenciacursosWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: Color(0xFF000F9F),
+          backgroundColor: Color(0xFF003399),
           automaticallyImplyLeading: false,
           leading: Padding(
             padding: EdgeInsets.all(8.0),

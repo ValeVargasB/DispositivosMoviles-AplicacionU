@@ -1,8 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'comentarios_widget.dart' show ComentariosWidget;
+import '/index.dart';
+import 'servicio_al_cliente_widget.dart' show ServicioAlClienteWidget;
 import 'package:flutter/material.dart';
 
-class ComentariosModel extends FlutterFlowModel<ComentariosWidget> {
+class ServicioAlClienteModel extends FlutterFlowModel<ServicioAlClienteWidget> {
   @override
   void initState(BuildContext context) {}
 

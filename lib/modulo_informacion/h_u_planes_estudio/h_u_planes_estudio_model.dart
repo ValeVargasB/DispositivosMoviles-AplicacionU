@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'planes_estudio_widget.dart' show PlanesEstudioWidget;
+import 'h_u_planes_estudio_widget.dart' show HUPlanesEstudioWidget;
 import 'package:flutter/material.dart';
 
-class PlanesEstudioModel extends FlutterFlowModel<PlanesEstudioWidget> {
+class HUPlanesEstudioModel extends FlutterFlowModel<HUPlanesEstudioWidget> {
   @override
   void initState(BuildContext context) {}
 

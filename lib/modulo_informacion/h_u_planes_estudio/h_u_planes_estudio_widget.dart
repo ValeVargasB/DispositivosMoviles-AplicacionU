@@ -2,28 +2,30 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'mapa_sedes_model.dart';
-export 'mapa_sedes_model.dart';
+import 'h_u_planes_estudio_model.dart';
+export 'h_u_planes_estudio_model.dart';
 
-class MapaSedesWidget extends StatefulWidget {
-  const MapaSedesWidget({super.key});
+class HUPlanesEstudioWidget extends StatefulWidget {
+  const HUPlanesEstudioWidget({super.key});
 
-  static String routeName = 'MapaSedes';
-  static String routePath = '/mapaSedes';
+  static String routeName = 'HU_PlanesEstudio';
+  static String routePath = '/hUPlanesEstudio';
 
   @override
-  State<MapaSedesWidget> createState() => _MapaSedesWidgetState();
+  State<HUPlanesEstudioWidget> createState() => _HUPlanesEstudioWidgetState();
 }
 
-class _MapaSedesWidgetState extends State<MapaSedesWidget> {
-  late MapaSedesModel _model;
+class _HUPlanesEstudioWidgetState extends State<HUPlanesEstudioWidget> {
+  late HUPlanesEstudioModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => MapaSedesModel());
+    _model = createModel(context, () => HUPlanesEstudioModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

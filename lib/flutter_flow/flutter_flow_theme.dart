@@ -32,6 +32,13 @@ abstract class FlutterFlowTheme {
   late Color error;
   late Color info;
 
+  late Color lightVibrantColor;
+  late Color mutedColor;
+  late Color lightMutedColor;
+  late Color darkMutedColor;
+
+  FFDesignTokens get designToken => FFDesignTokens(this);
+
   @Deprecated('Use displaySmallFamily instead')
   String get title1Family => displaySmallFamily;
   @Deprecated('Use displaySmall instead')
@@ -118,9 +125,9 @@ class LightModeTheme extends FlutterFlowTheme {
   @Deprecated('Use tertiary instead')
   Color get tertiaryColor => tertiary;
 
-  late Color primary = const Color(0xFF4B39EF);
+  late Color primary = const Color(0xFF07267D);
   late Color secondary = const Color(0xFF39D2C0);
-  late Color tertiary = const Color(0xFFEE8B60);
+  late Color tertiary = const Color(0xFFF6BF1D);
   late Color alternate = const Color(0xFFE0E3E7);
   late Color primaryText = const Color(0xFF14181B);
   late Color secondaryText = const Color(0xFF57636C);
@@ -134,6 +141,11 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color warning = const Color(0xFFF9CF58);
   late Color error = const Color(0xFFFF5963);
   late Color info = const Color(0xFFFFFFFF);
+
+  late Color lightVibrantColor = const Color(0xFFF4CA43);
+  late Color mutedColor = const Color(0xFFB2964D);
+  late Color lightMutedColor = const Color(0xFFD1CFB9);
+  late Color darkMutedColor = const Color(0xFF69567B);
 }
 
 abstract class Typography {
@@ -294,6 +306,56 @@ class ThemeTypography extends Typography {
         fontWeight: FontWeight.normal,
         fontSize: 12.0,
       );
+}
+
+class FFDesignTokens {
+  const FFDesignTokens(this.theme);
+  final FlutterFlowTheme theme;
+  FFSpacing get spacing => const FFSpacing();
+  FFRadius get radius => const FFRadius();
+  FFShadows get shadow => FFShadows(theme);
+}
+
+class FFSpacing {
+  const FFSpacing();
+  double get xs => 4.0;
+  double get sm => 8.0;
+  double get md => 16.0;
+  double get lg => 24.0;
+  double get xl => 32.0;
+}
+
+class FFRadius {
+  const FFRadius();
+  double get sm => 8.0;
+  double get md => 16.0;
+  double get lg => 24.0;
+  double get full => 9999.0;
+}
+
+class FFShadows {
+  const FFShadows(this.theme);
+  final FlutterFlowTheme theme;
+  BoxShadow get sm => const BoxShadow(
+      blurRadius: 3.0,
+      color: const Color(0x1A000000),
+      offset: const Offset(0.0, 1.0),
+      spreadRadius: 0.0);
+  BoxShadow get md => const BoxShadow(
+      blurRadius: 6.0,
+      color: const Color(0x1A000000),
+      offset: const Offset(0.0, 3.0),
+      spreadRadius: 0.0);
+  BoxShadow get lg => const BoxShadow(
+      blurRadius: 15.0,
+      color: const Color(0x1A000000),
+      offset: const Offset(0.0, 8.0),
+      spreadRadius: 0.0);
+  BoxShadow get xl => const BoxShadow(
+      blurRadius: 25.0,
+      color: const Color(0x1A000000),
+      offset: const Offset(0.0, 16.0),
+      spreadRadius: 0.0);
 }
 
 extension TextStyleHelper on TextStyle {

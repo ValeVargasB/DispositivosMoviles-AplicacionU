@@ -26,6 +26,8 @@ class _PortalestudiantilWidgetState extends State<PortalestudiantilWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => PortalestudiantilModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -46,7 +48,7 @@ class _PortalestudiantilWidgetState extends State<PortalestudiantilWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: Color(0xFF000F9F),
+          backgroundColor: Color(0xFF003399),
           automaticallyImplyLeading: false,
           title: Text(
             'Portal estudiantil',

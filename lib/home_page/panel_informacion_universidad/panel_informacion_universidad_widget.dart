@@ -2,39 +2,12 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'panel_informacion_universidad_model.dart';
 export 'panel_informacion_universidad_model.dart';
 
-/// Crea un componente llamado PanelInformacionUniversidad para FlutterFlow.
-///
-/// Debe ser un panel lateral derecho tipo drawer o side sheet. Fondo blanco,
-/// ancho aprox. 360 px, altura completa, contenido con scroll vertical
-/// (SingleChildScrollView + Column) y padding interno de 20 px.
-///
-/// Estructura:
-///
-/// 1. Encabezado: Row con Text “Información de la Universidad” y un
-/// IconButton (X) para cerrar.
-///
-/// 2. Tarjeta azul con bordes redondeados que contenga: icono universidad,
-/// Text “Universidad Fidélitas”, subtítulo “Excelencia Académica” y texto:
-/// “Institución de educación superior comprometida con la formación integral
-/// de profesionales.”
-///
-/// 3. Sección “Contacto” con tres filas y Divider:
-/// Teléfono: 2253-2434
-/// Correo: info@ufidelitas.ac.cr
-/// Dirección: San Pedro, Montes de Oca, San José, Costa Rica.
-///
-/// 4. Sección “Horario de Atención”:
-/// Lunes a Viernes 8:00 AM - 8:00 PM
-/// Sábados 8:00 AM - 2:00 PM
-/// Domingos Cerrado.
-///
-/// 5. Sección “Enlaces Oficiales”: botones “Sitio Web Oficial” y “Proceso de
-/// Admisión”.
 class PanelInformacionUniversidadWidget extends StatefulWidget {
   const PanelInformacionUniversidadWidget({super.key});
 
@@ -57,6 +30,8 @@ class _PanelInformacionUniversidadWidgetState
   void initState() {
     super.initState();
     _model = createModel(context, () => PanelInformacionUniversidadModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -104,7 +79,7 @@ class _PanelInformacionUniversidadWidgetState
                   borderColor: Colors.transparent,
                   borderRadius: 18.0,
                   borderWidth: 1.0,
-                  buttonSize: 36.0,
+                  buttonSize: 48.0,
                   fillColor: FlutterFlowTheme.of(context).primaryBackground,
                   icon: Icon(
                     Icons.close_rounded,
@@ -297,6 +272,7 @@ class _PanelInformacionUniversidadWidgetState
                                 .bodyMedium
                                 .fontStyle,
                           ),
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ].divide(SizedBox(width: 12.0)),
                 ),
@@ -308,17 +284,29 @@ class _PanelInformacionUniversidadWidgetState
                   ),
                 ),
                 Row(
-                  mainAxisSize: MainAxisSize.max,
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     Icon(
                       Icons.location_on_rounded,
                       color: Color(0xFF1E4ED8),
                       size: 20.0,
                     ),
-                    Text(
-                      'San Pedro, Montes de Oca, San José, \nCosta Rica.',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            font: GoogleFonts.inter(
+                    Align(
+                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      child: Text(
+                        'San Pedro, Montes de Oca, San José, \nCosta Rica.',
+                        textAlign: TextAlign.start,
+                        maxLines: 2,
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              font: GoogleFonts.inter(
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .fontStyle,
+                              ),
+                              letterSpacing: 0.0,
                               fontWeight: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .fontWeight,
@@ -326,14 +314,8 @@ class _PanelInformacionUniversidadWidgetState
                                   .bodyMedium
                                   .fontStyle,
                             ),
-                            letterSpacing: 0.0,
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .fontStyle,
-                          ),
+                        overflow: TextOverflow.ellipsis,
+                      ),
                     ),
                   ].divide(SizedBox(width: 12.0)),
                 ),
@@ -638,6 +620,48 @@ class _PanelInformacionUniversidadWidgetState
                     elevation: 0.0,
                     borderSide: BorderSide(
                       color: FlutterFlowTheme.of(context).primary,
+                      width: 2.0,
+                    ),
+                    borderRadius: BorderRadius.circular(12.0),
+                  ),
+                ),
+                FFButtonWidget(
+                  onPressed: () async {
+                    context.pushNamed(ServicioAlClienteWidget.routeName);
+                  },
+                  text: 'Servicio Al Cliente',
+                  icon: Icon(
+                    Icons.phone_sharp,
+                    size: 20.0,
+                  ),
+                  options: FFButtonOptions(
+                    width: double.infinity,
+                    height: 48.0,
+                    padding: EdgeInsets.all(8.0),
+                    iconPadding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    iconColor: FlutterFlowTheme.of(context).info,
+                    color: Color(0xFF003399),
+                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                          font: GoogleFonts.interTight(
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .fontStyle,
+                          ),
+                          color: FlutterFlowTheme.of(context).info,
+                          letterSpacing: 0.0,
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .titleSmall
+                              .fontWeight,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                        ),
+                    elevation: 0.0,
+                    borderSide: BorderSide(
+                      color: Color(0xFF003399),
                       width: 2.0,
                     ),
                     borderRadius: BorderRadius.circular(12.0),
